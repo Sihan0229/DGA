@@ -1,9 +1,10 @@
 import argparse
 from utils import load_data, preprocess_data, feature_engineering, train_model
+from feature_plot import generate_feature_importance_plots
 
 def parse_args():
     """Parse command-line arguments."""
-    parser = argparse.ArgumentParser(description="Train a model on DGA dataset")
+    parser = argparse.ArgumentParser(description="Train a model on DGA dataset and visualize feature importance")
     parser.add_argument('--file', type=str, required=True, help="Path to the dataset file")
     parser.add_argument('--method', type=str, choices=['original', 'three_ratios', 'diff_ratio'], default='original', help="Feature engineering method")
     parser.add_argument('--normalize', action='store_true', help="Whether to normalize the data")
@@ -26,6 +27,9 @@ def main():
 
     # Output results
     print(f"Model: {args.model}, Score: {score:.4f}")
+
+    # Generate feature importance plots (KNN, XGB, Random Forest)
+    generate_feature_importance_plots(df.drop(columns='act'), df['act'], df.drop(columns='act'), df['act'], result_dir="result")
 
 if __name__ == "__main__":
     main()

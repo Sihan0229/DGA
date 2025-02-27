@@ -1,0 +1,1 @@
+python main.py --file path_to_your_file.csv --method three_ratios --normalize --model knn
