@@ -21,6 +21,36 @@ def preprocess_data(df, normalize=False):
         df = pd.DataFrame(scaler.fit_transform(df), columns=df.columns)
     return df
 
+def create_interaction_features_with_names(X):
+    """
+    使用列名创建列之间的差和比值。
+
+    参数： 
+    X (pd.DataFrame): 包含特征的 DataFrame。 
+
+    返回： 
+    pd.DataFrame: 包含原始特征以及差和比值的新 DataFrame。 
+    """
+    col_names = X.columns  # 获取列名列表
+    num_cols = len(col_names)  # 获取列数
+
+    # 计算差值
+    for i in range(num_cols):
+        for j in range(i + 1, num_cols):
+            col_name_i = col_names[i]
+            col_name_j = col_names[j]
+            X[f'diff_{col_name_i}_{col_name_j}'] = X.iloc[:, i] - X.iloc[:, j]
+
+    # 计算比值 (注意处理除以零的情况)
+    for i in range(num_cols):
+        for j in range(num_cols):
+            if i != j:
+                col_name_i = col_names[i]
+                col_name_j = col_names[j]
+                X[f'ratio_{col_name_i}_{col_name_j}'] = X.iloc[:, i] / (X.iloc[:, j] + 1e-9)  # 添加一个小的常数以避免除以零
+
+    return X
+
 def feature_engineering(df, method="original"):
     """Create features based on the chosen method."""
     if method == "original":
@@ -33,9 +63,8 @@ def feature_engineering(df, method="original"):
         df['c2h2/c2h4'] = df['c2h2'] / (df['c2h4'] + 1e-6)  # Ratio 4: C2H2 / C2H4
         return df
     elif method == "diff_ratio":
-        # Example of creating differences and ratios
-        df['ch4_c2h4_diff'] = df['ch4'] - df['c2h4']
-        return df
+        # Create interaction features (differences and ratios)
+        return create_interaction_features_with_names(df)
     else:
         raise ValueError("Unknown feature method!")
 
