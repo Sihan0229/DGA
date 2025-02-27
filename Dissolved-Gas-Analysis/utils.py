@@ -27,8 +27,10 @@ def feature_engineering(df, method="original"):
         return df  # use original features
     elif method == "three_ratios":
         # Example of creating new features from ratios
-        df['ratio_ch4_c2h4'] = df['ch4'] / df['c2h4']
-        df['ratio_c2h6_c2h4'] = df['c2h6'] / df['c2h4']
+        df['ch4/h2'] = df['ch4'] / (df['h2'] + 1e-6)  # Ratio 1: CH4 / H2
+        df['c2h6/ch4'] = df['c2h6'] / (df['ch4'] + 1e-6)  # Ratio 2: C2H6 / CH4
+        df['c2h4/c2h6'] = df['c2h4'] / (df['c2h6'] + 1e-6)  # Ratio 3: C2H4 / C2H6
+        df['c2h2/c2h4'] = df['c2h2'] / (df['c2h4'] + 1e-6)  # Ratio 4: C2H2 / C2H4
         return df
     elif method == "diff_ratio":
         # Example of creating differences and ratios
