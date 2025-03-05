@@ -8,9 +8,9 @@
   - [X] 差分进化算法（DE）：基于种群的优化算法，通过个体差异进行搜索，具有较强的全局搜索能力。
   - [ ] Try XGBoost / LightGBM (better than Random Forest for small data).
   - [ ] Improve Features (PCA, feature interactions).
-  - [ ] Use ADASYN instead of SMOTE (avoids noisy synthetic data).
+  - [X] Use ADASYN instead of SMOTE (avoids noisy synthetic data).
   - [ ] Use Bayesian Optimization for Hyperparameter Tuning .
-  - [ ] Try an Ensemble (Voting Classifier) for better generalization.
+  - [X] Try an Ensemble (Voting Classifier) for better generalization.
 
 ## 已完成
 
