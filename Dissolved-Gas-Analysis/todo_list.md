@@ -7,7 +7,7 @@
   - [X] 模拟退火算法（SA）：模拟金属退火过程，以一定概率接受较差解，有助于跳出局部最优。
   - [X] 差分进化算法（DE）：基于种群的优化算法，通过个体差异进行搜索，具有较强的全局搜索能力。
   - [ ] Try XGBoost / LightGBM (better than Random Forest for small data).
-  - [ ] Improve Features (PCA, feature interactions).
+  - [X] Improve Features (PCA, feature interactions).
   - [X] Use ADASYN instead of SMOTE (avoids noisy synthetic data).
   - [ ] Use Bayesian Optimization for Hyperparameter Tuning .
   - [X] Try an Ensemble (Voting Classifier) for better generalization.
