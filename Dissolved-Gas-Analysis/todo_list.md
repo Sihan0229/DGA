@@ -6,7 +6,7 @@
   - [X] 遗传算法（GA）：模拟自然选择和遗传机制，适用于复杂优化问题。
   - [X] 模拟退火算法（SA）：模拟金属退火过程，以一定概率接受较差解，有助于跳出局部最优。
   - [X] 差分进化算法（DE）：基于种群的优化算法，通过个体差异进行搜索，具有较强的全局搜索能力。
-  - [ ] Try XGBoost / LightGBM (better than Random Forest for small data).
+  - [X] Try XGBoost / LightGBM (better than Random Forest for small data).
   - [X] Improve Features (PCA, feature interactions).
   - [X] Use ADASYN instead of SMOTE (avoids noisy synthetic data).
   - [ ] Use Bayesian Optimization for Hyperparameter Tuning .
@@ -25,3 +25,6 @@
   - [X] ADASYN：根据样本的难易程度生成不同数量的合成样本，更关注难以学习的样本。
   - [X] KMeansSMOTE：使用K-means聚类算法生成更具代表性的合成样本。
 - [X] 加入粒子群优化（PSO）算法，用于超参数调优或特征选择
+
+## 参考
+[AutoGluon](https://auto.gluon.ai/stable/tutorials/tabular/tabular-quick-start.html)
