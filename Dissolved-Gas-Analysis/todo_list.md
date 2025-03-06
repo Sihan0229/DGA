@@ -10,6 +10,7 @@
   - [X] Improve Features (PCA, feature interactions).
   - [X] Use ADASYN instead of SMOTE (avoids noisy synthetic data).
   - [ ] Use Bayesian Optimization for Hyperparameter Tuning .
+  - [ ] ExtraTreesEntr
   - [X] Try an Ensemble (Voting Classifier) for better generalization.
 
 ## 已完成
@@ -27,4 +28,5 @@
 - [X] 加入粒子群优化（PSO）算法，用于超参数调优或特征选择
 
 ## 参考
+
 [AutoGluon](https://auto.gluon.ai/stable/tutorials/tabular/tabular-quick-start.html)
