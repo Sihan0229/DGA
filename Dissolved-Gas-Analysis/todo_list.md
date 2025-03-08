@@ -28,7 +28,7 @@
   - [X] KMeansSMOTE：使用K-means聚类算法生成更具代表性的合成样本。
 - [X] 加入粒子群优化（PSO）算法，用于超参数调优或特征选择
 - [ ] 时间序列 数学定义 特征+++
-- [ ] 指标：一致性F1 Acc precision R PR 对比
+- [X] 指标：一致性F1 Acc precision R PR 对比
 - [ ] 参数优化
 
 ## 参考
