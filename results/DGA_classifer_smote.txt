@@ -1,0 +1,32 @@
+
+=== 模型评估结果 ===
+
+[No Oversampling]
+Accuracy: 0.8938
+Precision: 0.8852
+Recall: 0.8802
+F1: 0.8812
+
+[SMOTE]
+Accuracy: 0.9125
+Precision: 0.9188
+Recall: 0.9018
+F1: 0.9081
+
+[ADASYN]
+Accuracy: 0.8875
+Precision: 0.8739
+Recall: 0.8788
+F1: 0.8736
+
+[BorderlineSMOTE]
+Accuracy: 0.8812
+Precision: 0.8620
+Recall: 0.8709
+F1: 0.8646
+
+[KMeansSMOTE]
+Accuracy: 0.9000
+Precision: 0.9008
+Recall: 0.8881
+F1: 0.8917
