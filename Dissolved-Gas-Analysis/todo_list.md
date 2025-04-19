@@ -9,7 +9,7 @@
   - [X] Try XGBoost / LightGBM (better than Random Forest for small data).
   - [X] Improve Features (PCA, feature interactions).
   - [X] Use ADASYN instead of SMOTE (avoids noisy synthetic data).
-  - [ ] Use Bayesian Optimization for Hyperparameter Tuning .
+  - [X] Use Bayesian Optimization for Hyperparameter Tuning .
   - [X] ExtraTreesEntr
   - [X] Try an Ensemble (Voting Classifier) for better generalization.
 
@@ -19,7 +19,7 @@
 - [X] 比值差分构造特征工程处理
 - [X] 分类器树
 - [X] 分类器SVM
-- [ ] 添加SHAP方法，用于模型解释性分析 Why 贡献高的原因？算法角度
+- [X] 添加SHAP方法，用于模型解释性分析 Why 贡献高的原因？算法角度
 - [X] 数据集固定划分
 - [X] 使用SMOTE进行数据平衡，解决类别不平衡问题
 - [X] 尝试使用SMOTE的变种进行数据平衡：
