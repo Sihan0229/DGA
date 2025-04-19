@@ -1,0 +1,38 @@
+
+Warning: GA is terminated due to the maximum number of iterations without improvement was met!
+=== 各方法性能指标对比 ===
+
+[Base]
+Accuracy: 0.8938
+Precision: 0.8852
+Recall: 0.8802
+F1: 0.8812
+AUC: 0.9812
+
+[SMOTE]
+Accuracy: 0.9125
+Precision: 0.9188
+Recall: 0.9018
+F1: 0.9081
+AUC: 0.9767
+
+[SMOTE+PSO]
+Accuracy: 0.9125
+Precision: 0.9188
+Recall: 0.9018
+F1: 0.9081
+AUC: 0.9762
+
+[SMOTE+GA]
+Accuracy: 0.9125
+Precision: 0.9188
+Recall: 0.9018
+F1: 0.9081
+AUC: 0.9763
+
+[SMOTE+DE]
+Accuracy: 0.9125
+Precision: 0.9188
+Recall: 0.9018
+F1: 0.9081
+AUC: 0.9762
